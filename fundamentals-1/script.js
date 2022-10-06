@@ -67,12 +67,26 @@
 
 // const isFullAge = ageAlecsandra >= 18;
 
-const now = 2037;
-const ageAndy = now - 1997;
-const ageAlecsandra = now - 1999;
+// const now = 2037;
+// const ageAndy = now - 1997;
+// const ageAlecsandra = now - 1999;
 
-console.log(now - 1997 > now - 1999);
+// console.log(now - 1997 > now - 1999);
 
-let x, y;
-x = y = 25 - 10 - 5;
-console.log(x, y);
+// let x, y;
+// x = y = 25 - 10 - 5;
+// console.log(x, y);
+
+const firstName = "Andy";
+const job = "programmer";
+const birthYear = 1997;
+const year = 2037;
+
+const andy =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(andy);
+
+const andyNew = `Hello, I'm ${firstName}, a ${
+  year - birthYear
+} years old ${job}!`;
+console.log(andyNew);

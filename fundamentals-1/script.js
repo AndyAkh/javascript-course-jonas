@@ -178,13 +178,13 @@
 //     console.log("Not a valid day");
 // }
 
-const age = 16;
+// const age = 16;
 
-age >= 18;
-// ? console.log("I drink a lot of beer")
-// : console.log("I drink a lot of... water");
+// age >= 18;
+// // ? console.log("I drink a lot of beer")
+// // : console.log("I drink a lot of... water");
 
-const drink = age >= 18 ? "beer" : "water";
-console.log(drink);
+// const drink = age >= 18 ? "beer" : "water";
+// console.log(drink);
 
-console.log(`I like to drink ${age >= 18 ? "beer" : "water"}`);
+// console.log(`I like to drink ${age >= 18 ? "beer" : "water"}`);

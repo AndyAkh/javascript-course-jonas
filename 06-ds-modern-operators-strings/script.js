@@ -45,15 +45,54 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here's your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
   },
+
+  orderPizza: function(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients)
+  }
 };
 
-const arr = [7, 8, 9];
-const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
-console.log(badNewArray);
+restaurant.orderPizza("mushrooms", "onion", "squirt")
 
-const newArr = [1, 2, ...arr];
-console.log(newArr);
-console.log(...newArr);
+// 1) Destructuring
+
+// SPREAD operator, because it s on the RIGHT side of "="
+const arr = [1, 2, ...[3,4]];
+console.log(arr);
+
+// REST operator, because it s on the RIGHT side of "="
+const [a, b, ...others] = [1,2,3,4,5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(pizza, risotto, otherFood)
+
+// OBJECTS
+const {sat, ...weekdays} = restaurant.openingHours;
+console.log(weekdays);
+
+// 2) Functions
+
+const add = function(...numbers) {
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum)
+}
+
+add(2, 3);
+add(6, 200, 15);
+add(1, 412, 42, 43, 55, 99);
+
+const x = [1 ,41, 78];
+add(...x);
+
+// const arr = [7, 8, 9];
+// const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArray);
+
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
+// console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenu);
